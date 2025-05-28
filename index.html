@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NO BASTA!</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>NO BASTA!</h1>
+    <p class="subtitle">Pon a prueba tu mente en 60 segundos</p>
+
+    <div class="section">
+      <button onclick="generarLetra()">🎯 Generar letra</button>
+      <div id="letra" class="resultado">-</div>
+    </div>
+
+    <div class="section">
+      <button onclick="generarCategoria()">📚 Generar categoría</button>
+      <div id="categoria" class="resultado">-</div>
+    </div>
+
+    <div class="section">
+      <button onclick="iniciarTemporizador()">🕒 Iniciar tiempo</button>
+      <div id="temporizador" class="resultado">01:00</div>
+    </div>
+
+    <div class="section">
+      <button onclick="reiniciarJuego()">🔁 ¡Repetir ronda!</button>
+    </div>
+  </div>
+
+  <audio id="alarma" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
