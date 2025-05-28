@@ -18,8 +18,20 @@ let temporizador;
 let tiempoRestante = 60;
 
 function generarLetra() {
-  const letra = letras[Math.floor(Math.random() * letras.length)];
-  document.getElementById("letra").textContent = letra;
+  let iterations = 15;
+  const display = document.getElementById("letra");
+
+  let intervalo = setInterval(() => {
+    const letraTemporal = letras[Math.floor(Math.random() * letras.length)];
+    display.textContent = letraTemporal;
+    iterations--;
+
+    if (iterations <= 0) {
+      clearInterval(intervalo);
+      const letraFinal = letras[Math.floor(Math.random() * letras.length)];
+      display.textContent = letraFinal;
+    }
+  }, 80);
 }
 
 function generarCategoria() {
