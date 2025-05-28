@@ -57,12 +57,15 @@ button:hover {
   color: #333;
 }
 
-/* Tamaños diferenciados */
 #letra {
   font-size: 120px;
 }
 
-#categoria,
+#categoria {
+  font-size: 36px;
+  color: #444;
+}
+
 #temporizador {
   font-size: 36px;
 }
