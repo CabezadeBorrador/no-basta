@@ -34,15 +34,15 @@ function generarCategoria() {
 
 function iniciarTemporizador() {
   const display = document.getElementById("temporizador");
-  let tiempo = 30000; 
-  const intervalo = 10; 
+  let tiempo = 30000;
+  const intervalo = 10;
 
-  const countdown = setInterval(() => {
+  window.temporizadorActivo = setInterval(() => {
     tiempo -= intervalo;
     if (tiempo <= 0) {
-      clearInterval(countdown);
+      clearInterval(window.temporizadorActivo);
       display.textContent = "00.00";
-      new Audio("bugle_tune.ogg").play(); 
+      sonidoAlarma.play();
     } else {
       const segundos = Math.floor(tiempo / 1000).toString().padStart(2, '0');
       const milis = Math.floor((tiempo % 1000) / 10).toString().padStart(2, '0');
