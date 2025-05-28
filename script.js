@@ -1,5 +1,5 @@
 // Variables globales
-let sonidoAlarma = new Audio("https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg"); 
+let sonidoAlarma = document.getElementById("alarma"); 
 let temporizadorActivo = null;
 
 const letras = "ABCDEFGHIJLMNOPQRSTUV".split("");
