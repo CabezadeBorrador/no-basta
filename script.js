@@ -1,3 +1,7 @@
+// Variables globales
+let sonidoAlarma = new Audio("bugle_tune.ogg"); // asegúrate de que este archivo esté en la misma carpeta
+let temporizadorActivo = null;
+
 const letras = "ABCDEFGHIJLMNOPQRSTUV".split("");
 
 const categorias = [
@@ -9,7 +13,6 @@ const categorias = [
   "Prendas de vestir", "Celebridades",
   "Cosas que vuelan", "Cosas que ruedan", "Cosas que hacen ruido", "Cosas que huelen mal", "Cosas que puedes romper", "Cosas suaves", "Cosas pegajosas"
 ];
-
 
 // Generar letra aleatoria con efecto ruleta
 function generarLetra() {
@@ -45,7 +48,7 @@ function iniciarTemporizador() {
     if (tiempo <= 0) {
       clearInterval(temporizadorActivo);
       display.textContent = "00.00";
-      sonidoAlarma.play(); // Reproduce al final
+      sonidoAlarma.play();
     } else {
       const segundos = Math.floor(tiempo / 1000).toString().padStart(2, '0');
       const milis = Math.floor((tiempo % 1000) / 10).toString().padStart(2, '0');
